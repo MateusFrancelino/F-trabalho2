@@ -1,4 +1,3 @@
-
 let rec potenciad x=
     match x with
     | (var1,0) -> 1
@@ -8,9 +7,9 @@ let rec potenciad x=
 
 let rec detectar n =
     match n with
-    | (var1,var2) when var1 = var2 -> printfn ("%d")(var1*var2)
+    | (var1,var2) when var1 = var2 -> (var1*var2)
     | (var1,var2) when var1 < var2 -> potenciad(var1,var2)
-    | (var1,var2) when var2 < var1 -> potenciad(var2,var1)
+    | (var1,var2) when var2 < var1 -> potenciad(var1,var2)
 
     
 
@@ -23,15 +22,6 @@ let rec detectar n =
 [<EntryPoint>]
 let main argv =
 
-    let n1=2
-    let n2=3
-    let numero= potenciad (n1,n2)
-    printfn "%d"numero
-
-
-    
-    
-
-
-        
+    let numero = detectar (2,5)
+    printfn "%d" numero    
     0 
